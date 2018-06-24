@@ -1,8 +1,8 @@
 
-from django.conf.urls import url, include
-from .import views
-urlpatterns = [
+from django.conf.urls import url
+from . import views
 
-    
-    url(r'^$', views.post_list, name='post_list'),
+urlpatterns = [
+    url(r'^$', views.post_detail, name='post_detail'),
+    url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
 ]
